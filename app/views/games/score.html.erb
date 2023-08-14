@@ -1,0 +1,13 @@
+<h1>Result - 🐉 </h1>
+<div>
+<% if @included  %>
+  <% if @english_word %>
+    <p>Congratulations, <strong><%= @word %></strong> is a valid word!</p>
+    <% else %>
+    <p><%= @word %> is not a word!</p>
+  <% end %>
+  <% else %>
+  <p><%= @word %> can't be built out of these <%= @letters.join('-') %></p>
+<% end %>
+</div>
+<a href="<%= new_path %>" class="btn btn-primary">Play again</a>
